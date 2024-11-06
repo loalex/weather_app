@@ -32,29 +32,29 @@ def fetch_weatherbit_data():
     print(forecast.get_series(['temp', 'precip', 'solar_rad']))
 
     # Get an hourly air quality forecast for a lat/lon
-    forecast_AQ = api.get_forecast(source='airquality', lat=lat, lon=lon)
-    print(forecast_AQ.get_series(['aqi', 'pm10', 'no2']))
+    #forecast_AQ = api.get_forecast(source='airquality', lat=lat, lon=lon)
+    #print(forecast_AQ.get_series(['aqi', 'pm10', 'no2']))
 
 
 # Get hourly history by lat/lon
-    api.set_granularity('hourly')
-    history = api.get_history(lat=lat, lon=lon, start_date='2018-02-01', end_date='2018-02-02')
+   # api.set_granularity('hourly')
+   # history = api.get_history(lat=lat, lon=lon, start_date='2018-02-01', end_date='2018-02-02')
 
 # To get an hourly time series of temperature, precipitation, and rh:
-    print(history.get_series(['precip', 'temp', 'rh', 'solar_rad']))
+   # print(history.get_series(['precip', 'temp', 'rh', 'solar_rad']))
 
 # Get historical air quality data
-    history_AQ = api.get_history(source='airquality', lat=lat, lon=lon, start_date='2018-02-01', end_date='2018-02-02')
-    print(history_AQ.get_series(['aqi', 'pm10', 'no2']))
+  #  history_AQ = api.get_history(source='airquality', lat=lat, lon=lon, start_date='2018-02-01', end_date='2018-02-02')
+   # print(history_AQ.get_series(['aqi', 'pm10', 'no2']))
 
 ### Current Conditions
 
 # Get current air quality
-    AQ = api.get_current(source='airquality', city="Raleigh", state="North Carolina", country="US")
-    print(AQ.get_series(['aqi', 'pm10', 'pm25']))
+  #  AQ = api.get_current(source='airquality', city="Raleigh", state="North Carolina", country="US")
+   # print(AQ.get_series(['aqi', 'pm10', 'pm25']))
 
 # Get current conditions
-    current_weather = api.get_current(city="Raleigh", state="North Carolina", country="US")
-    print(current_weather.get_series(['weather', 'temp', 'precip']))
+  #  current_weather = api.get_current(city="Raleigh", state="North Carolina", country="US")
+   # print(current_weather.get_series(['weather', 'temp', 'precip']))
 
 #nie dziala
