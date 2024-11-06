@@ -4,7 +4,7 @@ from openweatherapp_api import fetch_weatherapp_data
 from weatherapi_api import fetch_weatherapi_data
 from bibliotekapyth import getweather
 from weatherbit_api import fetch_weatherbit_data
-from virtualcrossing_api import fetch_virtualcrossing_data
+#from virtualcrossing_api import fetch_virtualcrossing_data
 def get_location_input():
     choice = input(
         "Wybierz sposób wprowadzenia lokalizacji:\n1. Wpisz nazwę miejscowości\n2. Wprowadź współrzędne geograficzne\n> ")
@@ -32,7 +32,7 @@ def main():
     #data3 = fetch_weatherapi_data()
     #data4 = asyncio.run(getweather())
     #data5 = fetch_weatherbit_data()
-    data6 = fetch_virtualcrossing_data()
+    #data6 = fetch_virtualcrossing_data()
 
 
 if __name__ == "__main__":
